@@ -7,14 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1896F8CE1A0A8125009CBE1F /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896F8CD1A0A8125009CBE1F /* Array2D.swift */; };
+		1896F8D01A192952009CBE1F /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896F8CF1A192951009CBE1F /* Block.swift */; };
+		1896F8D21A193216009CBE1F /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896F8D11A193216009CBE1F /* Shape.swift */; };
+		1896F8D41A2ACCB2009CBE1F /* SquareShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896F8D31A2ACCB2009CBE1F /* SquareShape.swift */; };
+		1896F8D61A2ACFF5009CBE1F /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896F8D51A2ACFF4009CBE1F /* TShape.swift */; };
+		1896F8D81A2AD158009CBE1F /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896F8D71A2AD158009CBE1F /* LineShape.swift */; };
+		1896F8DA1A2AD289009CBE1F /* LShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896F8D91A2AD289009CBE1F /* LShape.swift */; };
+		1896F8DC1A2AD3A4009CBE1F /* JShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896F8DB1A2AD3A4009CBE1F /* JShape.swift */; };
+		1896F8DE1A2AD440009CBE1F /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896F8DD1A2AD440009CBE1F /* SShape.swift */; };
+		1896F8E01A2AD556009CBE1F /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896F8DF1A2AD556009CBE1F /* ZShape.swift */; };
 		18E976E21A09D4F000255DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E976E11A09D4F000255DA4 /* AppDelegate.swift */; };
-		18E976E41A09D4F000255DA4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18E976E31A09D4F000255DA4 /* GameScene.sks */; };
 		18E976E61A09D4F000255DA4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E976E51A09D4F000255DA4 /* GameScene.swift */; };
 		18E976E81A09D4F000255DA4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E976E71A09D4F000255DA4 /* GameViewController.swift */; };
 		18E976EB1A09D4F000255DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E976E91A09D4F000255DA4 /* Main.storyboard */; };
-		18E976ED1A09D4F000255DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E976EC1A09D4F000255DA4 /* Images.xcassets */; };
 		18E976F01A09D4F000255DA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E976EE1A09D4F000255DA4 /* LaunchScreen.xib */; };
 		18E976FC1A09D4F000255DA4 /* BlockWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E976FB1A09D4F000255DA4 /* BlockWarsTests.swift */; };
+		18E9770D1A09D7FA00255DA4 /* bomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18E977081A09D7FA00255DA4 /* bomb.mp3 */; };
+		18E9770E1A09D7FA00255DA4 /* drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18E977091A09D7FA00255DA4 /* drop.mp3 */; };
+		18E9770F1A09D7FA00255DA4 /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18E9770A1A09D7FA00255DA4 /* gameover.mp3 */; };
+		18E977101A09D7FA00255DA4 /* levelup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18E9770B1A09D7FA00255DA4 /* levelup.mp3 */; };
+		18E977111A09D7FA00255DA4 /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18E9770C1A09D7FA00255DA4 /* theme.mp3 */; };
+		18E977131A09D82D00255DA4 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18E977121A09D82D00255DA4 /* Sprites.atlas */; };
+		18E9771B1A09D85500255DA4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E977151A09D85500255DA4 /* background.png */; };
+		18E9771C1A09D85500255DA4 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E977161A09D85500255DA4 /* background@2x.png */; };
+		18E9771D1A09D85500255DA4 /* gameboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E977171A09D85500255DA4 /* gameboard.png */; };
+		18E9771E1A09D85500255DA4 /* gameboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E977181A09D85500255DA4 /* gameboard@2x.png */; };
+		18E9771F1A09D85500255DA4 /* whitebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E977191A09D85500255DA4 /* whitebg.png */; };
+		18E977201A09D85500255DA4 /* whitebg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E9771A1A09D85500255DA4 /* whitebg@2x.png */; };
+		18E977271A09E26F00255DA4 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E977261A09E26F00255DA4 /* Images-2.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +49,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1896F8CD1A0A8125009CBE1F /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
+		1896F8CF1A192951009CBE1F /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		1896F8D11A193216009CBE1F /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		1896F8D31A2ACCB2009CBE1F /* SquareShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareShape.swift; sourceTree = "<group>"; };
+		1896F8D51A2ACFF4009CBE1F /* TShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
+		1896F8D71A2AD158009CBE1F /* LineShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
+		1896F8D91A2AD289009CBE1F /* LShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LShape.swift; sourceTree = "<group>"; };
+		1896F8DB1A2AD3A4009CBE1F /* JShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JShape.swift; sourceTree = "<group>"; };
+		1896F8DD1A2AD440009CBE1F /* SShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
+		1896F8DF1A2AD556009CBE1F /* ZShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
 		18E976DC1A09D4F000255DA4 /* BlockWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E976E01A09D4F000255DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E976E11A09D4F000255DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18E976E31A09D4F000255DA4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		18E976E51A09D4F000255DA4 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		18E976E71A09D4F000255DA4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		18E976EA1A09D4F000255DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		18E976EC1A09D4F000255DA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18E976EF1A09D4F000255DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		18E976F51A09D4F000255DA4 /* BlockWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E976FA1A09D4F000255DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E976FB1A09D4F000255DA4 /* BlockWarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockWarsTests.swift; sourceTree = "<group>"; };
+		18E977081A09D7FA00255DA4 /* bomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bomb.mp3; sourceTree = "<group>"; };
+		18E977091A09D7FA00255DA4 /* drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drop.mp3; sourceTree = "<group>"; };
+		18E9770A1A09D7FA00255DA4 /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
+		18E9770B1A09D7FA00255DA4 /* levelup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = levelup.mp3; sourceTree = "<group>"; };
+		18E9770C1A09D7FA00255DA4 /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme.mp3; sourceTree = "<group>"; };
+		18E977121A09D82D00255DA4 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
+		18E977151A09D85500255DA4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		18E977161A09D85500255DA4 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		18E977171A09D85500255DA4 /* gameboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameboard.png; sourceTree = "<group>"; };
+		18E977181A09D85500255DA4 /* gameboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gameboard@2x.png"; sourceTree = "<group>"; };
+		18E977191A09D85500255DA4 /* whitebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitebg.png; sourceTree = "<group>"; };
+		18E9771A1A09D85500255DA4 /* whitebg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whitebg@2x.png"; sourceTree = "<group>"; };
+		18E977261A09E26F00255DA4 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +124,22 @@
 			isa = PBXGroup;
 			children = (
 				18E976E11A09D4F000255DA4 /* AppDelegate.swift */,
-				18E976E31A09D4F000255DA4 /* GameScene.sks */,
 				18E976E51A09D4F000255DA4 /* GameScene.swift */,
 				18E976E71A09D4F000255DA4 /* GameViewController.swift */,
 				18E976E91A09D4F000255DA4 /* Main.storyboard */,
-				18E976EC1A09D4F000255DA4 /* Images.xcassets */,
 				18E976EE1A09D4F000255DA4 /* LaunchScreen.xib */,
+				18E977261A09E26F00255DA4 /* Images-2.xcassets */,
 				18E976DF1A09D4F000255DA4 /* Supporting Files */,
+				1896F8CD1A0A8125009CBE1F /* Array2D.swift */,
+				1896F8CF1A192951009CBE1F /* Block.swift */,
+				1896F8D11A193216009CBE1F /* Shape.swift */,
+				1896F8D31A2ACCB2009CBE1F /* SquareShape.swift */,
+				1896F8D51A2ACFF4009CBE1F /* TShape.swift */,
+				1896F8D71A2AD158009CBE1F /* LineShape.swift */,
+				1896F8D91A2AD289009CBE1F /* LShape.swift */,
+				1896F8DB1A2AD3A4009CBE1F /* JShape.swift */,
+				1896F8DD1A2AD440009CBE1F /* SShape.swift */,
+				1896F8DF1A2AD556009CBE1F /* ZShape.swift */,
 			);
 			path = BlockWars;
 			sourceTree = "<group>";
@@ -96,6 +147,9 @@
 		18E976DF1A09D4F000255DA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18E977141A09D85500255DA4 /* Images */,
+				18E977121A09D82D00255DA4 /* Sprites.atlas */,
+				18E977071A09D7FA00255DA4 /* Sounds */,
 				18E976E01A09D4F000255DA4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -116,6 +170,31 @@
 				18E976FA1A09D4F000255DA4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18E977071A09D7FA00255DA4 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				18E977081A09D7FA00255DA4 /* bomb.mp3 */,
+				18E977091A09D7FA00255DA4 /* drop.mp3 */,
+				18E9770A1A09D7FA00255DA4 /* gameover.mp3 */,
+				18E9770B1A09D7FA00255DA4 /* levelup.mp3 */,
+				18E9770C1A09D7FA00255DA4 /* theme.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		18E977141A09D85500255DA4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				18E977151A09D85500255DA4 /* background.png */,
+				18E977161A09D85500255DA4 /* background@2x.png */,
+				18E977171A09D85500255DA4 /* gameboard.png */,
+				18E977181A09D85500255DA4 /* gameboard@2x.png */,
+				18E977191A09D85500255DA4 /* whitebg.png */,
+				18E9771A1A09D85500255DA4 /* whitebg@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +277,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E9771C1A09D85500255DA4 /* background@2x.png in Resources */,
+				18E9771F1A09D85500255DA4 /* whitebg.png in Resources */,
+				18E977271A09E26F00255DA4 /* Images-2.xcassets in Resources */,
+				18E9771E1A09D85500255DA4 /* gameboard@2x.png in Resources */,
+				18E9771D1A09D85500255DA4 /* gameboard.png in Resources */,
+				18E9771B1A09D85500255DA4 /* background.png in Resources */,
+				18E9770E1A09D7FA00255DA4 /* drop.mp3 in Resources */,
+				18E977201A09D85500255DA4 /* whitebg@2x.png in Resources */,
+				18E977111A09D7FA00255DA4 /* theme.mp3 in Resources */,
+				18E9770F1A09D7FA00255DA4 /* gameover.mp3 in Resources */,
 				18E976F01A09D4F000255DA4 /* LaunchScreen.xib in Resources */,
-				18E976ED1A09D4F000255DA4 /* Images.xcassets in Resources */,
-				18E976E41A09D4F000255DA4 /* GameScene.sks in Resources */,
+				18E977101A09D7FA00255DA4 /* levelup.mp3 in Resources */,
+				18E977131A09D82D00255DA4 /* Sprites.atlas in Resources */,
+				18E9770D1A09D7FA00255DA4 /* bomb.mp3 in Resources */,
 				18E976EB1A09D4F000255DA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +309,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1896F8DA1A2AD289009CBE1F /* LShape.swift in Sources */,
+				1896F8D41A2ACCB2009CBE1F /* SquareShape.swift in Sources */,
 				18E976E61A09D4F000255DA4 /* GameScene.swift in Sources */,
+				1896F8DC1A2AD3A4009CBE1F /* JShape.swift in Sources */,
+				1896F8D21A193216009CBE1F /* Shape.swift in Sources */,
+				1896F8CE1A0A8125009CBE1F /* Array2D.swift in Sources */,
+				1896F8D81A2AD158009CBE1F /* LineShape.swift in Sources */,
+				1896F8DE1A2AD440009CBE1F /* SShape.swift in Sources */,
+				1896F8D61A2ACFF5009CBE1F /* TShape.swift in Sources */,
+				1896F8D01A192952009CBE1F /* Block.swift in Sources */,
 				18E976E81A09D4F000255DA4 /* GameViewController.swift in Sources */,
+				1896F8E01A2AD556009CBE1F /* ZShape.swift in Sources */,
 				18E976E21A09D4F000255DA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,7 +444,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BlockWars/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,7 +456,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BlockWars/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -413,6 +517,7 @@
 				18E977011A09D4F000255DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18E977021A09D4F000255DA4 /* Build configuration list for PBXNativeTarget "BlockWarsTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +526,7 @@
 				18E977041A09D4F000255DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
