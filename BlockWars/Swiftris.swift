@@ -25,7 +25,7 @@ protocol SwiftrisDelegate {
     func gameDidBegin(swiftris: Swiftris)
     
     func gameShapeDidLand(swiftris: Swiftris)
-
+    
     func gameShapeDidMove(swiftris: Swiftris)
     
     func gameShapeDidDrop(swiftris: Swiftris)
@@ -55,7 +55,7 @@ class Swiftris {
         }
         delegate?.gameDidBegin(self)
     }
-
+    
     func newShape() -> (fallingShape:Shape?, nextShape:Shape?) {
         fallingShape = nextShape
         nextShape = Shape.random(PreviewColumn, startingRow: PreviewRow)
@@ -67,7 +67,7 @@ class Swiftris {
             endGame()
             return (nil, nil)
         }
-
+        
         return (fallingShape, nextShape)
     }
     
@@ -99,20 +99,20 @@ class Swiftris {
             shape.lowerShapeByOneRow()
             if detectIllegalPlacement() {
                 shape.raiseShapeByOneRow()
-            if detectIllegalPlacement() {
-                endGame()
+                if detectIllegalPlacement() {
+                    endGame()
+                } else {
+                    settleShape()
+                }
             } else {
-                settleShape()
+                delegate?.gameShapeDidMove(self)
+                if detectTouch() {
+                    settleShape()
+                }
             }
-        } else {
-            delegate?.gameShapeDidMove(self)
-            if detectTouch() {
-                settleShape()
-            }
-        }
         }
     }
-
+    
     func rotateShape() {
         if let shape = fallingShape {
             if detectIllegalPlacement() {
@@ -122,7 +122,7 @@ class Swiftris {
             }
         }
     }
-
+    
     func moveShapeLeft() {
         if let shape = fallingShape {
             shape.shiftLeftByOneColumn()
@@ -133,96 +133,96 @@ class Swiftris {
             delegate?.gameShapeDidMove(self)
         }
     }
-
-func moveShapeRight() {
-    if let shape = fallingShape {
-        shape.shiftRightByOneColumn()
-        if detectIllegalPlacement() {
-            shape.shiftLeftByOneColumn()
-            return
+    
+    func moveShapeRight() {
+        if let shape = fallingShape {
+            shape.shiftRightByOneColumn()
+            if detectIllegalPlacement() {
+                shape.shiftLeftByOneColumn()
+                return
+            }
+            delegate?.gameShapeDidMove(self)
         }
-        delegate?.gameShapeDidMove(self)
     }
-}
-
-func settleShape() {
-    if let shape = fallingShape {
-        for block in shape.blocks {
-            blockArray[block.column, block,row] = block
+    
+    func settleShape() {
+        if let shape = fallingShape {
+            for block in shape.blocks {
+                blockArray[block.column, block.row] = block
+            }
+            fallingShape = nil
+            delegate?.gameShapeDidLand(self)
         }
-        fallingShape = nil
-        delegate?.gameShapeDidLand(self)
     }
-}
-
-func detectTouch() -> Bool {
-    if let shape = fallingShape {
-        for bottomBlock in shape.bottomBlocks {
-            if bottomBlock.row == NumRows - 1 ||
-                blockArray[bottomBlock.column, bottomBlock.row + 1] != nil {
-                    return true
+    
+    func detectTouch() -> Bool {
+        if let shape = fallingShape {
+            for bottomBlock in shape.bottomBlocks {
+                if bottomBlock.row == NumRows - 1 ||
+                    blockArray[bottomBlock.column, bottomBlock.row + 1] != nil {
+                        return true
                 }
+            }
         }
+        return false
     }
-    return false
-}
-
-func endGame() {
-    score = 0
-    level = 1
-    delegate?.gameDidEnd(self)
-}
-
-func removeCompletedLines() -> (linesRemoved: Array<Array<Block>>, fallenBlocks: Array<Array<Block>>) {
-    var removedLines = Array<Array<Block>>()
-    for var row = NumRows - 1; row > 0; row-- {
-        var rowOfBlocks = Array<Block>()
-
-        for column in 0..<NumColumns {
-            if let block = blockArray[column, row] {
-                rowOfBlocks.append(block)
+    
+    func endGame() {
+        score = 0
+        level = 1
+        delegate?.gameDidEnd(self)
+    }
+    
+    func removeCompletedLines() -> (linesRemoved: Array<Array<Block>>, fallenBlocks: Array<Array<Block>>) {
+        var removedLines = Array<Array<Block>>()
+        for var row = NumRows - 1; row > 0; row-- {
+            var rowOfBlocks = Array<Block>()
+            
+            for column in 0..<NumColumns {
+                if let block = blockArray[column, row] {
+                    rowOfBlocks.append(block)
+                }
             }
-        }
-        if rowOfBlocks.count == NumColumns {
-            removedLines.append(rowOfBlocks)
-            for block in rowOfBlocks {
-                blockArray[block.column, block.row] = nil
+            if rowOfBlocks.count == NumColumns {
+                removedLines.append(rowOfBlocks)
+                for block in rowOfBlocks {
+                    blockArray[block.column, block.row] = nil
+                }
             }
+            
         }
         
-    }
-    
-    if removedLines.count == 0 {
-        return ([], [])
-    }
-    
-    let pointsEarned = removedLines.count * PointsPerLine * level
-    score += pointsEarned
-    if score >= level * LevelThreshold {
-        level += 1
-        delegate?.gameDidLevelUp(self)
-    }
-
-    var fallenBlocks = Array<Array<Block>>()
-    for column in 0..<NumColumns {
-        var fallenBlocksArray = Array<Block>()
-
-        for var row = removedLines[0][0].row - 1; row > 0; row-- {
-            if let block = blockArray[column, row] {
-                var newRow = row
-                while (newRow < NumRows - 1 && blockArray[column, newRow + 1] == nil) {
-                    newRow++
+        if removedLines.count == 0 {
+            return ([], [])
+        }
+        
+        let pointsEarned = removedLines.count * PointsPerLine * level
+        score += pointsEarned
+        if score >= level * LevelThreshold {
+            level += 1
+            delegate?.gameDidLevelUp(self)
+        }
+        
+        var fallenBlocks = Array<Array<Block>>()
+        for column in 0..<NumColumns {
+            var fallenBlocksArray = Array<Block>()
+            
+            for var row = removedLines[0][0].row - 1; row > 0; row-- {
+                if let block = blockArray[column, row] {
+                    var newRow = row
+                    while (newRow < NumRows - 1 && blockArray[column, newRow + 1] == nil) {
+                        newRow++
+                    }
+                    block.row = newRow
+                    blockArray[column, row] = nil
+                    blockArray[column, newRow] = block
+                    fallenBlocksArray.append(block)
                 }
-                block.row = newRow
-                blockArray[column, row] = nil
-                blockArray[column, newRow] = block
-                fallenBlocksArray.append(block)
+            }
+            if fallenBlocksArray.count > 0 {
+                fallenBlocks.append(fallenBlocksArray)
             }
         }
-        if fallenBlocksArray.count > 0 {
-            fallenBlocks.append(fallenBlocksArray)
-        }
+        return (removedLines, fallenBlocks)
     }
-    return (removedLines, fallenBlocks)
 }
-
