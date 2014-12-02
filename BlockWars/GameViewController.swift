@@ -81,13 +81,13 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         swiftris.dropShape()
     }
     
-    func gestureRecognizer(guestureRecognizer: UIGestureRecognizer!, shouldBeRequiredToFailByGestureRecognizer otherGestureRecognizer: UIGestureRecognizer!) -> Bool {
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer!, shouldBeRequiredToFailByGestureRecognizer otherGestureRecognizer: UIGestureRecognizer!) -> Bool {
         if let swipeRec = gestureRecognizer as? UISwipeGestureRecognizer {
             if let panRec = otherGestureRecognizer as? UIPanGestureRecognizer {
                 return true
             }
         } else if let panRec = gestureRecognizer as? UIPanGestureRecognizer {
-            if let tapRec = otherGestureRecognizer as? UITapGestureRecoginzer {
+            if let tapRec = otherGestureRecognizer as? UITapGestureRecognizer {
                 return true
             }
         }
