@@ -13,8 +13,52 @@
                         <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bdc-N1-crn" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nk1-jG-faq">
+                                <rect key="frame" x="224" y="118" width="84" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whitebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="AuN-76-WyN">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="180-QR-fay">
+                                        <rect key="frame" x="7" y="20" width="70" height="21"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="0.13333333333333333" green="0.6470588235294118" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cul-ex-deH">
+                                        <rect key="frame" x="0.0" y="45" width="84" height="39"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="35"/>
+                                        <color key="textColor" red="0.1333333333" green="0.64705882349999999" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQE-Wo-sub">
+                                <rect key="frame" x="224" y="237" width="84" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whitebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zur-gP-6T4">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmR-AS-wDj">
+                                        <rect key="frame" x="7" y="20" width="70" height="21"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="0.54509803921568623" green="0.45490196078431372" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZ9-ts-eqF">
+                                        <rect key="frame" x="0.0" y="45" width="84" height="39"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="35"/>
+                                        <color key="textColor" red="0.54509803921568623" green="0.45490196078431372" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
@@ -23,6 +67,8 @@
                             <outletCollection property="gestureRecognizers" destination="uQ7-Bv-SFk" appends="YES" id="M7q-xe-0WT"/>
                         </connections>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="cZ1-qC-aCq">
@@ -46,4 +92,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="whitebg.png" width="84" height="100"/>
+    </resources>
 </document>

@@ -15,7 +15,6 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
 
     var scene: GameScene!
     var swiftris:Swiftris!
-    
     var panPointReference:CGPoint?
 
     override func viewDidLoad() {
