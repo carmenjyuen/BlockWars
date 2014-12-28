@@ -16,7 +16,7 @@ let PreviewColumn = 12
 let PreviewRow = 1
 
 let PointsPerLine = 10
-let LevelThreshold = 1000
+let LevelThreshold = 100
 
 protocol SwiftrisDelegate {
     
@@ -115,6 +115,7 @@ class Swiftris {
     
     func rotateShape() {
         if let shape = fallingShape {
+            shape.rotateClockwise()
             if detectIllegalPlacement() {
                 shape.rotateCounterClockwise()
             } else {
